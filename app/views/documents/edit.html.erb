@@ -1,0 +1,14 @@
+<h1>Edit Document</h1>
+
+<%= form_with model: @document do |form| %>
+  <%= form.label :name, "Document name:" %></br>
+  <%= form.text_field :name %></br>
+
+  <%= form.label :user_id, "Author:" %></br>
+  <%= form.text_field :user_id %></br>
+
+  <%= form.label :content, "Content:" %></br>
+  <%= form.text_area :content %></br>
+
+  <%= form.submit "Submit" %>
+<% end %>

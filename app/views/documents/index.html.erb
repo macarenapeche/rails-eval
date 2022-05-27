@@ -1,0 +1,13 @@
+<h1>Documents' list</h1>
+
+<ul>
+<% Document.all.each do |document| %>
+  <li><b>Name:</b> <%= document.name %></br>
+  <b>Content: </b><%= document.content.truncate(10) %>...
+  <%= button_to "Show Details", document_path(document), method: :get %>
+  <%= button_to "Edit", edit_document_path(document), method: :get %>
+
+<% end %>
+</ul>
+
+<%= button_to "New Document", new_document_path, method: :get %>

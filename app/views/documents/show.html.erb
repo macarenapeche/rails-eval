@@ -1,0 +1,14 @@
+<h1>Document Details</h1>
+
+<p><b>Document name: </b><%= @document.name %></p>
+<p><b>Author's name: </b><%= @document.user.name %></p>
+<p><b>Author's email: </b><%= @document.user.email %></p>
+
+<p><b>Tags: </b>
+<% @document.tags.each do |tag| %>
+  <%= tag.name %>,
+<% end %>
+</p>
+
+<p><b>Content: </b>
+<%= @document.content %></p>

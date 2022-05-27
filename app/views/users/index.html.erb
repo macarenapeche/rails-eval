@@ -1,0 +1,8 @@
+<h1>Users List</h1>
+
+<ul>
+<% User.all.each do |user| %>
+  <%= user.name %>
+  <%= button_to "Show user", user_path(user), method: :get %>
+<% end %>
+</ul>

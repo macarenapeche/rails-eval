@@ -1,0 +1,11 @@
+<h1><%= @user.name %> Profile</h1>
+
+<p><b>Name: </b><%= @user.name %></p>
+<p><b>Email: </b><%= @user.email %></p>
+
+<h2><%= @user.name %> Documents</h2>
+<ul>
+<% @user.documents.each do |document| %>
+  <li><b>Name: </b> <%= document.name %>, Content: <%= document.content.truncate(10) %>...
+<% end %>
+</ul>
