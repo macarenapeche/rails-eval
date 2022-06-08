@@ -1,5 +1,5 @@
 class Document < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 256}
   validates :content, presence: true
   
   belongs_to :user
