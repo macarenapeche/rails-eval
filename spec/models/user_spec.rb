@@ -1,7 +1,7 @@
 RSpec.describe User, type: :model do 
   #validations tests
   describe 'validations' do
-    subject(:user) { User.create(name: "Macarena", email: "macarena@toptal.com") }
+    subject(:user) { User.new(name: "Macarena", email: "macarena@toptal.com") }
 
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:email) }
